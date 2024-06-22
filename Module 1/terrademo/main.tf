@@ -8,16 +8,16 @@ terraform {
 }
 
 provider "google" {
-  project = "dataengcamp-427114"
-  region  = "us-central1"
+  credentials = local.credentials
+  project = var.project
+  region  = var.region
 }
 
 resource "google_storage_bucket" "demo-bucket" {
-  name          = "dataengcamp-427114-terra-demo-bucket"
-  location      = "US"
+  name          = var.gcs_bucket_name
+  location      = var.location
 
-  # Optional, but recommended settings:
-  storage_class = "STANDARD"
+  storage_class = var.gcs_storage_class
   uniform_bucket_level_access = true
 
   versioning {
@@ -34,4 +34,9 @@ resource "google_storage_bucket" "demo-bucket" {
   }
 
   force_destroy = true
+}
+
+resource "google_bigquery_dataset" "demo_dataset" {
+  dataset_id = var.bq_dataset_name
+  location = var.location
 }
