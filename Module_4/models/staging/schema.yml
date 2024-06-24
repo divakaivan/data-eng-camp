@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: source_name
+  - name: staging
     database: dataengcamp-427114
     schema: ny_taxi
 
