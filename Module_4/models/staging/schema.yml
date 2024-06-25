@@ -22,11 +22,11 @@ models:
           - not_null:
               severity: warn
 
-      - name: vendorid
+      - name: VendorID
         data_type: int64
         description: ""
 
-      - name: ratecodeid
+      - name: RatecodeID
         data_type: int64
         description: ""
 
@@ -117,11 +117,11 @@ models:
         data_type: string
         description: ""
 
-      - name: vendorid
+      - name: VendorID
         data_type: int64
         description: ""
 
-      - name: ratecodeid
+      - name: RatecodeID
         data_type: int64
         description: ""
 
