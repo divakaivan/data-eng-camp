@@ -4,7 +4,6 @@ sources:
   - name: staging
     database: dataengcamp-427114
     schema: ny_taxi
-
     tables:
       - name: green_tripdata
       - name: yellow_tripdata
