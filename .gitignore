@@ -43,3 +43,5 @@ terraform.rc
 
 Module 1/terrademo/keys
 Module 1/terrademo/.terraform.lock.hcl
+
+Module 5/data/*
